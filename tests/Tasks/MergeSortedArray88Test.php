@@ -5,6 +5,9 @@ namespace tests\Tasks;
 use App\Tasks\MergeSortedArrayClass;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * docker compose exec app php artisan test --filter=MergeSortedArray88Test
+ */
 class MergeSortedArray88Test extends TestCase
 {
     public function test88MergeSortedArray()
