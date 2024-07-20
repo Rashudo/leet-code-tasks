@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace App\Tasks;
 
-use Termwind\Components\Element;
-
-use function Symfony\Component\String\b;
-
 /**
  * Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
  *
@@ -64,8 +60,8 @@ final class RemoveElementClass
      * @param Integer $val
      * @return Integer
      */
-    public function simpleOne(array &$nums, int $val): int {
-
+    public function simpleOne(array &$nums, int $val): int
+    {
         $result = 0;
         $memo = [];
         foreach ($nums as $num) {
