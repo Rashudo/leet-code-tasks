@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Tasks;
 
@@ -43,7 +43,9 @@ final class LongestSubstringWithoutRepeatingCharactersClass
      */
     public function run(string $string): int
     {
-        if ($string === '') return 0;
+        if ($string === '') {
+            return 0;
+        }
 
         // result
         $count = 1;
@@ -55,7 +57,6 @@ final class LongestSubstringWithoutRepeatingCharactersClass
         $strLen = strlen($string);
 
         for ($i = 0; $i <= $strLen; $i++) {
-
             $existsIndex = $i != $strLen
                 ? array_search($string[$i], $lettersArray)
                 : true;
@@ -67,7 +68,9 @@ final class LongestSubstringWithoutRepeatingCharactersClass
                 }
 
                 // no need to continue, coz word has ended
-                if ($i == $strLen) break;
+                if ($i == $strLen) {
+                    break;
+                }
 
                 // slice word from unique letter
                 $lettersArray = array_slice($lettersArray, $existsIndex + 1);

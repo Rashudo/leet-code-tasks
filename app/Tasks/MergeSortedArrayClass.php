@@ -60,8 +60,12 @@ final class MergeSortedArrayClass
      * @param Integer[] $nums2
      * @param Integer $n
      */
-    public function goodOne(&$nums1, $m, $nums2, $n): void
-    {
+    public function goodOne(
+        array &$nums1,
+        int $m,
+        array $nums2,
+        int $n
+    ): void {
         $nums1 = array_slice($nums1, 0, $m);
         $nums2 = array_slice($nums2, 0, $n);
         $nums1 = array_merge($nums1, $nums2);
@@ -74,8 +78,12 @@ final class MergeSortedArrayClass
      * @param Integer[] $nums2
      * @param Integer $n
      */
-    public function merge(&$nums1, $m, $nums2, $n): void
-    {
+    public function merge(
+        array &$nums1,
+        int $m,
+        array $nums2,
+        int $n
+    ): void {
         $totalIndex = $m + $n - 1;
 
         $nums1Index = $m - 1;
